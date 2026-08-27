@@ -4,9 +4,9 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Relativity Digital Thread",
+  title: "Paul OS Feature Pack",
   description:
-    "A portable, synthetic control surface for governed manufacturing events and system reconciliation.",
+    "Portable, synthetic digital-thread observability and data-product certification features for Paul OS.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

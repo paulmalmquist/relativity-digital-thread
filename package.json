@@ -1,8 +1,8 @@
 {
-  "name": "relativity-digital-thread",
-  "version": "1.0.0",
+  "name": "paul-os-governance-feature-pack",
+  "version": "1.1.0",
   "private": true,
-  "description": "Portable digital-thread observability feature and synthetic Next.js demo.",
+  "description": "Portable digital-thread observability and data-product certification features for Paul OS.",
   "license": "UNLICENSED",
   "author": "paulmalmquist",
   "repository": {
@@ -15,6 +15,8 @@
   },
   "keywords": [
     "digital-thread",
+    "certification",
+    "data-governance",
     "manufacturing",
     "nextjs",
     "observability",
@@ -37,7 +39,8 @@
     "lucide-react": "1.34.0",
     "next": "16.3.3",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "server-only": "0.0.1"
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",

@@ -1,4 +1,8 @@
-# Paul OS integration
+# Paul OS digital-thread integration
+
+This guide covers `features/digital-thread/`. For the independent Report
+Certification feature, use
+[the report-certification integration guide](REPORT_CERTIFICATION_INTEGRATION.md).
 
 ## Copy map
 

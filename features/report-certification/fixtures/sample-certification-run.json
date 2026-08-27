@@ -1,0 +1,117 @@
+{
+  "schema": "synthetic-certification-summary/1.0",
+  "replayable": false,
+  "run_id": "run:demo-certification-0001",
+  "product_id": "product:demo-production-flow",
+  "evaluated_at": "2026-08-27T15:00:00.000Z",
+  "valid_until": "2026-11-25T14:30:00.000Z",
+  "trusted_context": {
+    "as_of": "2026-08-27T15:00:00.000Z",
+    "policy_content_hash": "sha256:22b69b76eae7f56ec94a81249cd890c4ca29b02245eb1a5975d1256815069022",
+    "ordered_gate_ids": [
+      "gate:demo-source-to-staging",
+      "gate:demo-staging-to-intermediate",
+      "gate:demo-intermediate-to-mart",
+      "gate:demo-mart-to-consumer"
+    ],
+    "product_topology_hash": "sha256:1796ff98c01f6d4adcb8e6f60abdaad422b094a3a17da4bf705a8334b1b822ad"
+  },
+  "policy": {
+    "id": "policy:demo-minimum-gate",
+    "version": "2.3.0-demo",
+    "content_hash": "sha256:22b69b76eae7f56ec94a81249cd890c4ca29b02245eb1a5975d1256815069022",
+    "minimum_gate_model": true,
+    "missing_evidence_outcome": "NOT_PROVEN"
+  },
+  "versions": {
+    "agent": "1.0.0-demo",
+    "git_sha": "dddddddddddddddddddddddddddddddddddddddd",
+    "pipeline_manifest_hash": "sha256:3000000000000000000000000000000000000000000000000000000000000003",
+    "semantic_model": "semantic-model:demo-v7"
+  },
+  "required_gates": [
+    {
+      "gate_id": "gate:demo-source-to-staging",
+      "from_asset_id": "source:demo-production-orders",
+      "to_asset_id": "model:demo-staging-production-orders",
+      "achieved_tier": 3,
+      "verdict": "PASS",
+      "evidence_artifact_ids": [
+        "artifact:demo-source-to-staging:registration.identity",
+        "artifact:demo-source-to-staging:verification.structure",
+        "artifact:demo-source-to-staging:verification.movement",
+        "artifact:demo-source-to-staging:verification.transformation-fidelity",
+        "artifact:demo-source-to-staging:verification.operations",
+        "artifact:demo-source-to-staging:assurance.governance"
+      ]
+    },
+    {
+      "gate_id": "gate:demo-staging-to-intermediate",
+      "from_asset_id": "model:demo-staging-production-orders",
+      "to_asset_id": "model:demo-intermediate-build-orders",
+      "achieved_tier": 3,
+      "verdict": "PASS",
+      "evidence_artifact_ids": [
+        "artifact:demo-staging-to-intermediate:registration.identity",
+        "artifact:demo-staging-to-intermediate:verification.structure",
+        "artifact:demo-staging-to-intermediate:verification.movement",
+        "artifact:demo-staging-to-intermediate:verification.transformation-fidelity",
+        "artifact:demo-staging-to-intermediate:verification.operations",
+        "artifact:demo-staging-to-intermediate:assurance.governance"
+      ]
+    },
+    {
+      "gate_id": "gate:demo-intermediate-to-mart",
+      "from_asset_id": "model:demo-intermediate-build-orders",
+      "to_asset_id": "model:demo-production-flow-mart",
+      "achieved_tier": 3,
+      "verdict": "PASS",
+      "evidence_artifact_ids": [
+        "artifact:demo-intermediate-to-mart:registration.identity",
+        "artifact:demo-intermediate-to-mart:verification.structure",
+        "artifact:demo-intermediate-to-mart:verification.movement",
+        "artifact:demo-intermediate-to-mart:verification.transformation-fidelity",
+        "artifact:demo-intermediate-to-mart:verification.operations",
+        "artifact:demo-intermediate-to-mart:assurance.governance"
+      ]
+    },
+    {
+      "gate_id": "gate:demo-mart-to-consumer",
+      "from_asset_id": "model:demo-production-flow-mart",
+      "to_asset_id": "consumer:demo-production-flow",
+      "achieved_tier": 3,
+      "verdict": "PASS",
+      "evidence_artifact_ids": [
+        "artifact:demo-mart-to-consumer:registration.identity",
+        "artifact:demo-mart-to-consumer:verification.structure",
+        "artifact:demo-mart-to-consumer:verification.operations",
+        "artifact:demo-mart-to-consumer:assurance.governance",
+        "artifact:demo-mart-to-consumer:assurance.consumer-semantics"
+      ]
+    }
+  ],
+  "metric_contract": {
+    "id": "contract:demo-production-flow",
+    "version": "4.2.0-demo",
+    "content_hash": "sha256:1000000000000000000000000000000000000000000000000000000000000001"
+  },
+  "sme_approval": {
+    "approval_id": "approval:demo-metric-contract-4.2.0",
+    "metric_contract_version": "4.2.0-demo",
+    "status": "approved",
+    "valid_until": "2026-12-31T23:59:59.000Z",
+    "signature_artifact_id": "artifact:demo-sme-approval"
+  },
+  "decision": {
+    "achieved_tier": 3,
+    "verdict": "PASS",
+    "recertification_triggers": [
+      "pipeline_code",
+      "source_schema",
+      "semantic_measure",
+      "metric_contract",
+      "sme_approval",
+      "slo_breach"
+    ]
+  }
+}
