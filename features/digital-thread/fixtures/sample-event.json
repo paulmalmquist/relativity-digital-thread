@@ -1,0 +1,36 @@
+{
+  "event_id": "01J66TQV5P6X4QF9M4D3T2A7BC",
+  "event_type": "QualityDispositionApproved",
+  "schema_version": "quality.disposition.v2",
+  "source": {
+    "system": "qms",
+    "object_type": "nonconformance",
+    "object_id": "NCR-2026-0147",
+    "revision": "4"
+  },
+  "subject": {
+    "enterprise_object_id": "material_lot:IN718-26-0814-A",
+    "object_type": "material_lot",
+    "source_object_id": "IN718-26-0814-A"
+  },
+  "occurred_at": "2026-08-27T14:02:11.041Z",
+  "observed_at": "2026-08-27T14:02:11.218Z",
+  "actor": {
+    "type": "human",
+    "id": "quality-role-redacted"
+  },
+  "approval": {
+    "state": "approved",
+    "evidence_uri": "qms://NCR-2026-0147/revisions/4"
+  },
+  "correlation_id": "WF-MRB-7D91",
+  "causation_id": null,
+  "data_classification": "controlled",
+  "config_hash": "sha256:demo-only",
+  "payload": {
+    "disposition": "rework",
+    "affected_build_ids": ["BLD-LPBF-0826-017"],
+    "required_state": "QA_HOLD",
+    "effective_at": "2026-08-27T14:02:11.041Z"
+  }
+}

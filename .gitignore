@@ -1,0 +1,26 @@
+# Dependencies
+/node_modules/
+
+# Next.js output
+/.next/
+/out/
+
+# Tests and tooling
+/coverage/
+*.tsbuildinfo
+*.log
+
+# Local configuration and credentials
+.env*
+!.env.example
+.openai/
+.vercel/
+.wrangler/
+.sites-runtime/
+.turbo/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
